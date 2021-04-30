@@ -1,0 +1,24 @@
+<template>
+  <button @click="onClick()" :style="{background: color}" class="btn"><i class="fas fa-plus"></i> {{text}}</button>
+</template>
+
+<script>
+export default {
+  name: "Button",
+  props: {
+    text: String,
+    color: String
+  },
+  methods: {
+    onClick() {
+      this.$emit('btn-click');
+    }
+  }
+}
+</script>
+
+<style scoped>
+  .fas {
+    color: white;
+  }
+</style>
